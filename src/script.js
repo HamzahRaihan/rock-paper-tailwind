@@ -32,10 +32,10 @@ function rollingChoice() {
   const start = new Date().getTime();
   setInterval(function () {
     if (new Date().getTime() - start > 1000) {
-      clearInterval;
+      clearInterval();
       return;
     }
-    imgComputer.setAttribute('src', `../img/${image[i++]}.jpg`);
+    imgComputer.setAttribute('src', `./img/${image[i++]}.jpg`);
     if (i == image.length) {
       i = 0;
     }
@@ -51,7 +51,7 @@ choice.forEach(function (image) {
     rollingChoice();
 
     setTimeout(function () {
-      imgComputer.setAttribute('src', `../img/${getComputer}.jpg`);
+      imgComputer.setAttribute('src', `./img/${getComputer}.jpg`);
       info.innerHTML = result;
     }, 1000);
   });
